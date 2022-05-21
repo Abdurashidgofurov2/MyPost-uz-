@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/asosiy"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Asosiy" />
+    <item
+        android:id="@+id/qid"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Qidiruv" />
+    <item
+        android:id="@+id/yuk"
+        android:icon="@drawable/_03221911558424386_128"
+        android:title="Yuklash" />
+    <item
+        android:id="@+id/notif"
+        android:icon="@drawable/ic_baseline_notifications_none_24"
+        android:title="Bildirishnomalar" />
+    <item
+        android:id="@+id/his"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Hisob" />
+</menu>
