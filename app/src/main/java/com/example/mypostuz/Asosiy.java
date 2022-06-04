@@ -2,23 +2,30 @@ package com.example.mypostuz;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import com.example.mypostuz.databinding.ActivityAsosiyBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Asosiy extends AppCompatActivity {
     ActivityAsosiyBinding binding;
-
+Fragment fragment=new Home();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +35,9 @@ public class Asosiy extends AppCompatActivity {
         BadgeDrawable badgeDrawable = binding.bottom.getOrCreateBadge(R.id.notif);
         badgeDrawable.setVisible(true);
         badgeDrawable.setNumber(9);
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment).commit();
 
-        PagerAdapter pagerAdapter = new PagerAdapter(this);
-        binding.pager2.setAdapter(pagerAdapter);
+
         binding.bottom.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -38,64 +45,28 @@ public class Asosiy extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.asosiy:
-                        binding.pager2.setCurrentItem(0);
-                        binding.liner.setVisibility(View.VISIBLE);
+                       fragment=new Home();
                         closekey();
                         break;
                     case R.id.qid:
-                        binding.pager2.setCurrentItem(1);
-                        binding.liner.setVisibility(View.GONE);
+                        fragment=new Qidiruv();
                         break;
                     case R.id.yuk:
-                        binding.pager2.setCurrentItem(2);
-                        binding.liner.setVisibility(View.GONE);
+                        fragment=new Post();
                         closekey();
+                        startActivity(new Intent(Asosiy.this,Login.class));
                         break;
                     case R.id.notif:
-                        binding.pager2.setCurrentItem(3);
-                        binding.liner.setVisibility(View.GONE);
+                        fragment=new Eslatma();
                         closekey();
                         break;
                     case R.id.his:
-                        binding.pager2.setCurrentItem(4);
-                        binding.liner.setVisibility(View.GONE);
+                        fragment=new Hisob();
                         closekey();
                         break;
                 }
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment).commit();
                 return true;
-            }
-        });
-        binding.pager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                switch (position) {
-                    case 0:
-                        binding.bottom.setSelectedItemId(R.id.asosiy);
-                        binding.liner.setVisibility(View.VISIBLE);
-                        closekey();
-                        break;
-                    case 1:
-                        binding.bottom.setSelectedItemId(R.id.qid);
-                        binding.liner.setVisibility(View.GONE);
-                        break;
-                    case 2:
-                        binding.bottom.setSelectedItemId(R.id.yuk);
-                        binding.liner.setVisibility(View.GONE);
-                        closekey();
-                        break;
-                    case 3:
-                        binding.bottom.setSelectedItemId(R.id.notif);
-                        binding.liner.setVisibility(View.GONE);
-                        closekey();
-                        break;
-                    case 4:
-                        binding.bottom.setSelectedItemId(R.id.his);
-                        binding.liner.setVisibility(View.GONE);
-                        closekey();
-                        break;
-                }
-
             }
         });
 

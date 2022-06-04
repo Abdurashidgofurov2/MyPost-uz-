@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,54 +8,97 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editText"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/edittextback"
-        android:drawableEnd="@drawable/ic_baseline_close_24"
-        android:ems="10"
-        android:fontFamily="@font/alata"
-        android:hint="izlash..."
-        android:inputType="textPersonName"
-        android:paddingLeft="30dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#575757"
-        android:textCursorDrawable="@android:drawable/status_bar_item_background"
-        android:textSize="20sp"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:cardBackgroundColor="#FFFFFF">
 
-    <com.google.android.material.tabs.TabLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittextback"
+                android:drawableEnd="@drawable/ic_baseline_mic_24"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:hint="qayerdan..."
+                android:inputType="textPersonName"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="#353434"
+                android:textColorHint="#575757"
+                android:textCursorDrawable="@android:drawable/status_bar_item_app_background"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittextback"
+                android:drawableEnd="@drawable/ic_baseline_mic_24"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:hint="qayerga..."
+                android:inputType="textPersonName"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="#353434"
+                android:textColorHint="#575757"
+                android:textCursorDrawable="@android:drawable/status_bar_item_app_background"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                app:tabIndicatorColor="#000000"
+                app:tabMode="scrollable"
+
+                app:tabTextColor="#000000">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Taxi" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabItem"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Oxirgilar" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pochta" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hisoblar" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Postlar" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rasmlar" />
-    </com.google.android.material.tabs.TabLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#B8B8B8"
-        android:orientation="vertical"
-        android:showDividers="beginning"></LinearLayout>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/qidiruvshablon" />
 
 </LinearLayout>

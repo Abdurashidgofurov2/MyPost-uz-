@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/</item>
+
         <item>@font/aclonica</item>
+        <item>@font/actor</item>
         <item>@font/akaya_telivigala</item>
         <item>@font/akronim</item>
         <item>@font/alata</item>
+        <item>@font/alatsi</item>
         <item>@font/allan</item>
         <item>@font/allerta</item>
         <item>@font/amiko</item>
@@ -14,8 +16,17 @@
         <item>@font/asul</item>
         <item>@font/audiowide</item>
         <item>@font/baloo</item>
+        <item>@font/baloo_bhai</item>
+        <item>@font/baloo_bhaijaan</item>
+        <item>@font/baloo_bhaina</item>
+        <item>@font/baloo_paaji</item>
+        <item>@font/baloo_tammudu</item>
+        <item>@font/baloo_thambi</item>
         <item>@font/crafty_girls</item>
+        <item>@font/fugaz_one</item>
         <item>@font/jacques_francois_shadow</item>
         <item>@font/jua</item>
+        <item>@font/lilita_one</item>
+        <item>@font/rubik_mono_one</item>
     </array>
 </resources>
