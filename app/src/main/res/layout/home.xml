@@ -23,74 +23,17 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_weight="85"
                 android:fontFamily="cursive"
                 android:gravity="center"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
-                android:text="Maydon"
 
+                android:text="My Travel"
                 android:textColor="#000000"
                 android:textSize="34sp"
                 android:textStyle="bold" />
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="15">
-
-
-                <ImageView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="7dp"
-                    android:tint="#000000"
-                    app:srcCompat="@drawable/icons8_chat_64"
-                    tools:ignore="UseAppTint" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginBottom="33dp"
-                    android:background="@drawable/sanoq_fon"
-                    android:fontFamily="@font/aclonica"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    android:text="12"
-                    android:textColor="#FFFFFF"
-                    android:textSize="8sp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/_298306151607043061_128" />
-            </RelativeLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -99,6 +42,6 @@
         android:id="@+id/postrecyc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/qidiruvshablon" />
+        tools:listitem="@layout/post_list" />
 
 </LinearLayout>

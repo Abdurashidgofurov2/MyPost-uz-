@@ -25,7 +25,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Asosiy extends AppCompatActivity {
     ActivityAsosiyBinding binding;
-Fragment fragment=new Home();
+    Fragment fragment = new Home();
+    boolean ispressed=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,23 +47,22 @@ Fragment fragment=new Home();
                 switch (item.getItemId()) {
 
                     case R.id.asosiy:
-                       fragment=new Home();
+                        fragment = new Home();
                         closekey();
                         break;
                     case R.id.qid:
-                        fragment=new Qidiruv();
+                        fragment = new Qidiruv();
                         break;
-                    case R.id.yuk:
-                        fragment=new Post();
-                        closekey();
-                        startActivity(new Intent(Asosiy.this,Login.class));
-                        break;
+//                    case R.id.yuk:
+//                        fragment = new Post();
+//                        closekey();
+//                        break;
                     case R.id.notif:
-                        fragment=new Eslatma();
+                        fragment = new Eslatma();
                         closekey();
                         break;
                     case R.id.his:
-                        fragment=new Hisob();
+                        fragment = new Hisob();
                         closekey();
                         break;
                 }
@@ -71,11 +72,30 @@ Fragment fragment=new Home();
         });
 
     }
-    public void closekey(){
-        View v=this.getCurrentFocus();
-        if (v!=null){
-            InputMethodManager manager= (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            manager.hideSoftInputFromWindow(v.getWindowToken(),0);
+
+    public void closekey() {
+        View v = this.getCurrentFocus();
+        if (v != null) {
+            InputMethodManager manager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(v.getWindowToken(), 0);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (ispressed) {
+            finishAffinity();
+        } else {
+            ispressed = true;
+            Toast.makeText(this, "chiqish uchun yana bir marta bosing !", Toast.LENGTH_SHORT).show();
+        }
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                ispressed = false;
+            }
+        };
+        new Handler().postDelayed(runnable, 2000);
     }
 }

@@ -13,7 +13,7 @@ public class Hisob extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.hisob,container,false);
+        View v=inflater.inflate(R.layout.accaunt,container,false);
         return v;
     }
 }

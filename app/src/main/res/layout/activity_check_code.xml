@@ -18,7 +18,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="64769-enter-password.json"
+        app:lottie_fileName="95741-verify-code.json"
         app:lottie_loop="true" />
 
     <TextView
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
 
         android:gravity="center"
-        android:text="TELEFON RAQAMINGIZ !"
+        android:text="Tasdiqlash kodini kiriting !"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -38,21 +38,22 @@
         android:layout_height="wrap_content"
 
         android:gravity="center"
-        android:text="shaxsingizni tasdiqlash uchun telefon raqamingizni kiiriting !"
+        android:text="Biz sizning raqamingizga tasdiqlash kodini yubordik"
         android:textColor="#000000"
         android:textSize="16sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/namel"
+        android:id="@+id/codeinput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:prefixText="+998"
+        android:textColorHint="#2E2E2E"
+        app:boxStrokeColor="#000000"
         app:counterEnabled="true"
-        app:counterMaxLength="9"
+        app:counterMaxLength="6"
         app:prefixTextColor="@color/black"
-        app:startIconDrawable="@drawable/ic_baseline_phone_24">
+        app:startIconDrawable="@drawable/ic_baseline_numbers_24">
 
         <EditText
             android:id="@+id/edname"
@@ -62,9 +63,9 @@
             android:clickable="false"
             android:ems="10"
 
-            android:hint="raqam kiriting !"
+            android:hint="kodni kiriting !"
             android:inputType="phone"
-            android:maxLength="9"
+            android:maxLength="6"
             android:selectAllOnFocus="false"
             android:textSize="20sp"
 
@@ -73,16 +74,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tasdiqlash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:layout_marginLeft="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:backgroundTint="#FFFFFF"
         android:minHeight="65dp"
         android:shadowColor="#434242"
         android:shadowDx="10"
-        android:text="kirish"
+        android:text="tasdiqlash"
         android:textColor="#000000"
         app:cornerRadius="10dp"
         app:strokeColor="#000000"

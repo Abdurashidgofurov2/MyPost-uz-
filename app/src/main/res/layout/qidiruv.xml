@@ -18,6 +18,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
+
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
@@ -25,8 +27,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/edittextback"
-                android:drawableEnd="@drawable/ic_baseline_mic_24"
+                android:background="@drawable/edittextbackreng"
+                android:drawableEnd="@drawable/ic_baseline_gps_not_fixed_24"
                 android:ems="10"
                 android:fontFamily="@font/alata"
                 android:hint="qayerdan..."
@@ -46,10 +48,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/edittextback"
-                android:drawableEnd="@drawable/ic_baseline_mic_24"
+                android:background="@drawable/edittextbackreng"
+                android:drawableEnd="@drawable/ic_baseline_gps_fixed_24"
                 android:ems="10"
                 android:fontFamily="@font/alata"
                 android:hint="qayerga..."
@@ -69,8 +71,6 @@
                 android:layout_height="match_parent"
                 android:background="#FFFFFF"
                 app:tabIndicatorColor="#000000"
-                app:tabMode="scrollable"
-
                 app:tabTextColor="#000000">
 
                 <com.google.android.material.tabs.TabItem
@@ -97,6 +97,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/qidiruvshablon" />

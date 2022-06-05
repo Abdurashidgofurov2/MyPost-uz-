@@ -7,16 +7,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Post_Adapter extends RecyclerView.Adapter<Post_Adapter.ViewHolder> {
+public class QidiruvAdapter extends RecyclerView.Adapter<QidiruvAdapter.ViewHolder> {
     @NonNull
     @Override
-    public Post_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.post_list,parent,false);
+    public QidiruvAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.qidiruvshablon,parent,false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Post_Adapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull QidiruvAdapter.ViewHolder holder, int position) {
 
     }
 
