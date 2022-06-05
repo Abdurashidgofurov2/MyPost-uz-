@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Login">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="64769-enter-password.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="TELEFON RAQAMINGIZ !"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="shaxsingizni tasdiqlash uchun telefon raqamingizni kiiriting !"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:prefixText="+998"
+        app:counterEnabled="true"
+        app:counterMaxLength="9"
+        app:prefixTextColor="@color/black"
+        app:startIconDrawable="@drawable/ic_baseline_phone_24">
+
+        <EditText
+            android:id="@+id/edname"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:ems="10"
+
+            android:hint="raqam kiriting !"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:selectAllOnFocus="false"
+            android:textSize="20sp"
+
+
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:minHeight="65dp"
+        android:shadowColor="#434242"
+        android:shadowDx="10"
+        android:text="kirish"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+</LinearLayout>
